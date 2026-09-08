@@ -6,14 +6,14 @@ describe('GraphQL Proxy Architecture', () => {
 
   it('formats the GraphQL serviceCreate mutation correctly', () => {
     const projectId = "mock-project-id";
-    const mutation = 
+    const mutation = `
       mutation {
-        serviceCreate(input: { projectId: " + projectId + " }) {
+        serviceCreate(input: { projectId: "${projectId}" }) {
           id
           name
         }
       }
-    ;
+    `;
     expect(mutation).toContain("serviceCreate");
     expect(mutation).toContain(projectId);
   });

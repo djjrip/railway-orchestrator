@@ -60,7 +60,7 @@ export default function Home() {
     setActionLoading(true);
     setError('');
     try {
-      const res = await fetch(/api/railway?id= + id, {
+      const res = await fetch('/api/railway?id=' + id, {
         method: 'DELETE',
       });
       const data = await res.json();
