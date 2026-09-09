@@ -1,5 +1,6 @@
-import { render, screen, waitFor } from '@testing-library/react'
-import Page from '../src/app/page'
+import { render, screen, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Page from '../src/app/page';
 
 jest.mock('next/navigation', () => ({
   useRouter() {
